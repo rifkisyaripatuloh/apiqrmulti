@@ -1,0 +1,745 @@
+﻿{
+    "v":  2,
+    "name":  "QR Multi-Link API - Full Collection",
+    "folders":  [
+                    {
+                        "v":  1,
+                        "name":  "01 - Authentication",
+                        "folders":  [
+
+                                    ],
+                        "requests":  [
+                                         {
+                                             "v":  1,
+                                             "name":  "01. Get CSRF Cookie",
+                                             "method":  "GET",
+                                             "endpoint":  "{{base_url}}/sanctum/csrf-cookie",
+                                             "headers":  [
+                                                             {
+                                                                 "key":  "Accept",
+                                                                 "value":  "application/json",
+                                                                 "active":  true
+                                                             }
+                                                         ],
+                                             "params":  [
+
+                                                        ],
+                                             "body":  {
+                                                          "contentType":  "application/json",
+                                                          "body":  ""
+                                                      },
+                                             "auth":  {
+                                                          "authType":  "none",
+                                                          "authActive":  false,
+                                                          "authName":  "",
+                                                          "authValue":  ""
+                                                      },
+                                             "preRequestScript":  "",
+                                             "testScript":  "",
+                                             "requestVariables":  [
+
+                                                                  ],
+                                             "responses":  [
+
+                                                           ]
+                                         },
+                                         {
+                                             "v":  1,
+                                             "name":  "02. Login Admin",
+                                             "method":  "POST",
+                                             "endpoint":  "{{base_url}}/api/v1/auth/login",
+                                             "headers":  [
+                                                             {
+                                                                 "key":  "Accept",
+                                                                 "value":  "application/json",
+                                                                 "active":  true
+                                                             },
+                                                             {
+                                                                 "key":  "Content-Type",
+                                                                 "value":  "application/json",
+                                                                 "active":  true
+                                                             }
+                                                         ],
+                                             "params":  [
+
+                                                        ],
+                                             "body":  {
+                                                          "contentType":  "application/json",
+                                                          "body":  "{\n  \"email\": \"admin@example.com\",\n  \"password\": \"password\"\n}"
+                                                      },
+                                             "auth":  {
+                                                          "authType":  "none",
+                                                          "authActive":  false,
+                                                          "authName":  "",
+                                                          "authValue":  ""
+                                                      },
+                                             "preRequestScript":  "",
+                                             "testScript":  "",
+                                             "requestVariables":  [
+
+                                                                  ],
+                                             "responses":  [
+
+                                                           ]
+                                         },
+                                         {
+                                             "v":  1,
+                                             "name":  "03. Current Admin",
+                                             "method":  "GET",
+                                             "endpoint":  "{{base_url}}/api/v1/auth/me",
+                                             "headers":  [
+                                                             {
+                                                                 "key":  "Accept",
+                                                                 "value":  "application/json",
+                                                                 "active":  true
+                                                             }
+                                                         ],
+                                             "params":  [
+
+                                                        ],
+                                             "body":  {
+                                                          "contentType":  "application/json",
+                                                          "body":  ""
+                                                      },
+                                             "auth":  {
+                                                          "authType":  "none",
+                                                          "authActive":  false,
+                                                          "authName":  "",
+                                                          "authValue":  ""
+                                                      },
+                                             "preRequestScript":  "",
+                                             "testScript":  "",
+                                             "requestVariables":  [
+
+                                                                  ],
+                                             "responses":  [
+
+                                                           ]
+                                         },
+                                         {
+                                             "v":  1,
+                                             "name":  "04. Logout Admin",
+                                             "method":  "POST",
+                                             "endpoint":  "{{base_url}}/api/v1/auth/logout",
+                                             "headers":  [
+                                                             {
+                                                                 "key":  "Accept",
+                                                                 "value":  "application/json",
+                                                                 "active":  true
+                                                             }
+                                                         ],
+                                             "params":  [
+
+                                                        ],
+                                             "body":  {
+                                                          "contentType":  "application/json",
+                                                          "body":  ""
+                                                      },
+                                             "auth":  {
+                                                          "authType":  "none",
+                                                          "authActive":  false,
+                                                          "authName":  "",
+                                                          "authValue":  ""
+                                                      },
+                                             "preRequestScript":  "",
+                                             "testScript":  "",
+                                             "requestVariables":  [
+
+                                                                  ],
+                                             "responses":  [
+
+                                                           ]
+                                         }
+                                     ]
+                    },
+                    {
+                        "v":  1,
+                        "name":  "02 - QR Pages",
+                        "folders":  [
+
+                                    ],
+                        "requests":  [
+                                         {
+                                             "v":  1,
+                                             "name":  "01. Create QR Page",
+                                             "method":  "POST",
+                                             "endpoint":  "{{base_url}}/api/v1/qr-pages",
+                                             "headers":  [
+                                                             {
+                                                                 "key":  "Accept",
+                                                                 "value":  "application/json",
+                                                                 "active":  true
+                                                             },
+                                                             {
+                                                                 "key":  "Content-Type",
+                                                                 "value":  "application/json",
+                                                                 "active":  true
+                                                             }
+                                                         ],
+                                             "params":  [
+
+                                                        ],
+                                             "body":  {
+                                                          "contentType":  "application/json",
+                                                          "body":  "{\n  \"title\": \"Toko Kopi Nusantara\",\n  \"description\": \"Semua link resmi toko\"\n}"
+                                                      },
+                                             "auth":  {
+                                                          "authType":  "none",
+                                                          "authActive":  false,
+                                                          "authName":  "",
+                                                          "authValue":  ""
+                                                      },
+                                             "preRequestScript":  "",
+                                             "testScript":  "pw.test(\"Create QR succeeded\", () =\u003e { pw.expect(pw.response.status).toBe(201); });\npw.env.set(\"qr_page_id\", pw.response.body.data.id);\npw.env.set(\"qr_code\", pw.response.body.data.code);",
+                                             "requestVariables":  [
+
+                                                                  ],
+                                             "responses":  [
+
+                                                           ]
+                                         },
+                                         {
+                                             "v":  1,
+                                             "name":  "02. List QR Pages",
+                                             "method":  "GET",
+                                             "endpoint":  "{{base_url}}/api/v1/qr-pages?search=kopi\u0026per_page=10",
+                                             "headers":  [
+                                                             {
+                                                                 "key":  "Accept",
+                                                                 "value":  "application/json",
+                                                                 "active":  true
+                                                             }
+                                                         ],
+                                             "params":  [
+                                                            {
+                                                                "key":  "search",
+                                                                "value":  "kopi",
+                                                                "active":  true
+                                                            },
+                                                            {
+                                                                "key":  "per_page",
+                                                                "value":  "10",
+                                                                "active":  true
+                                                            }
+                                                        ],
+                                             "body":  {
+                                                          "contentType":  "application/json",
+                                                          "body":  ""
+                                                      },
+                                             "auth":  {
+                                                          "authType":  "none",
+                                                          "authActive":  false,
+                                                          "authName":  "",
+                                                          "authValue":  ""
+                                                      },
+                                             "preRequestScript":  "",
+                                             "testScript":  "",
+                                             "requestVariables":  [
+
+                                                                  ],
+                                             "responses":  [
+
+                                                           ]
+                                         },
+                                         {
+                                             "v":  1,
+                                             "name":  "03. Show QR Page",
+                                             "method":  "GET",
+                                             "endpoint":  "{{base_url}}/api/v1/qr-pages/{{qr_page_id}}",
+                                             "headers":  [
+                                                             {
+                                                                 "key":  "Accept",
+                                                                 "value":  "application/json",
+                                                                 "active":  true
+                                                             }
+                                                         ],
+                                             "params":  [
+
+                                                        ],
+                                             "body":  {
+                                                          "contentType":  "application/json",
+                                                          "body":  ""
+                                                      },
+                                             "auth":  {
+                                                          "authType":  "none",
+                                                          "authActive":  false,
+                                                          "authName":  "",
+                                                          "authValue":  ""
+                                                      },
+                                             "preRequestScript":  "",
+                                             "testScript":  "",
+                                             "requestVariables":  [
+
+                                                                  ],
+                                             "responses":  [
+
+                                                           ]
+                                         },
+                                         {
+                                             "v":  1,
+                                             "name":  "04. Publish QR Page",
+                                             "method":  "PATCH",
+                                             "endpoint":  "{{base_url}}/api/v1/qr-pages/{{qr_page_id}}",
+                                             "headers":  [
+                                                             {
+                                                                 "key":  "Accept",
+                                                                 "value":  "application/json",
+                                                                 "active":  true
+                                                             },
+                                                             {
+                                                                 "key":  "Content-Type",
+                                                                 "value":  "application/json",
+                                                                 "active":  true
+                                                             }
+                                                         ],
+                                             "params":  [
+
+                                                        ],
+                                             "body":  {
+                                                          "contentType":  "application/json",
+                                                          "body":  "{\n  \"status\": \"active\"\n}"
+                                                      },
+                                             "auth":  {
+                                                          "authType":  "none",
+                                                          "authActive":  false,
+                                                          "authName":  "",
+                                                          "authValue":  ""
+                                                      },
+                                             "preRequestScript":  "",
+                                             "testScript":  "",
+                                             "requestVariables":  [
+
+                                                                  ],
+                                             "responses":  [
+
+                                                           ]
+                                         },
+                                         {
+                                             "v":  1,
+                                             "name":  "05. QR Statistics",
+                                             "method":  "GET",
+                                             "endpoint":  "{{base_url}}/api/v1/qr-pages/{{qr_page_id}}/stats?from=2026-10-01\u0026to=2026-10-27",
+                                             "headers":  [
+                                                             {
+                                                                 "key":  "Accept",
+                                                                 "value":  "application/json",
+                                                                 "active":  true
+                                                             }
+                                                         ],
+                                             "params":  [
+                                                            {
+                                                                "key":  "from",
+                                                                "value":  "2026-10-01",
+                                                                "active":  true
+                                                            },
+                                                            {
+                                                                "key":  "to",
+                                                                "value":  "2026-10-27",
+                                                                "active":  true
+                                                            }
+                                                        ],
+                                             "body":  {
+                                                          "contentType":  "application/json",
+                                                          "body":  ""
+                                                      },
+                                             "auth":  {
+                                                          "authType":  "none",
+                                                          "authActive":  false,
+                                                          "authName":  "",
+                                                          "authValue":  ""
+                                                      },
+                                             "preRequestScript":  "",
+                                             "testScript":  "",
+                                             "requestVariables":  [
+
+                                                                  ],
+                                             "responses":  [
+
+                                                           ]
+                                         },
+                                         {
+                                             "v":  1,
+                                             "name":  "06. Delete QR Page",
+                                             "method":  "DELETE",
+                                             "endpoint":  "{{base_url}}/api/v1/qr-pages/{{qr_page_id}}",
+                                             "headers":  [
+                                                             {
+                                                                 "key":  "Accept",
+                                                                 "value":  "application/json",
+                                                                 "active":  true
+                                                             }
+                                                         ],
+                                             "params":  [
+
+                                                        ],
+                                             "body":  {
+                                                          "contentType":  "application/json",
+                                                          "body":  ""
+                                                      },
+                                             "auth":  {
+                                                          "authType":  "none",
+                                                          "authActive":  false,
+                                                          "authName":  "",
+                                                          "authValue":  ""
+                                                      },
+                                             "preRequestScript":  "",
+                                             "testScript":  "",
+                                             "requestVariables":  [
+
+                                                                  ],
+                                             "responses":  [
+
+                                                           ]
+                                         }
+                                     ]
+                    },
+                    {
+                        "v":  1,
+                        "name":  "03 - QR Links",
+                        "folders":  [
+
+                                    ],
+                        "requests":  [
+                                         {
+                                             "v":  1,
+                                             "name":  "01. Add WhatsApp Link",
+                                             "method":  "POST",
+                                             "endpoint":  "{{base_url}}/api/v1/qr-pages/{{qr_page_id}}/links",
+                                             "headers":  [
+                                                             {
+                                                                 "key":  "Accept",
+                                                                 "value":  "application/json",
+                                                                 "active":  true
+                                                             },
+                                                             {
+                                                                 "key":  "Content-Type",
+                                                                 "value":  "application/json",
+                                                                 "active":  true
+                                                             }
+                                                         ],
+                                             "params":  [
+
+                                                        ],
+                                             "body":  {
+                                                          "contentType":  "application/json",
+                                                          "body":  "{\n  \"label\": \"WhatsApp\",\n  \"icon_key\": \"whatsapp\",\n  \"destination_url\": \"https://wa.me/6281234567890\",\n  \"is_active\": true\n}"
+                                                      },
+                                             "auth":  {
+                                                          "authType":  "none",
+                                                          "authActive":  false,
+                                                          "authName":  "",
+                                                          "authValue":  ""
+                                                      },
+                                             "preRequestScript":  "",
+                                             "testScript":  "pw.test(\"Create link succeeded\", () =\u003e { pw.expect(pw.response.status).toBe(201); });\npw.env.set(\"link_id\", pw.response.body.data.id);\npw.env.set(\"link_token\", pw.response.body.data.token);",
+                                             "requestVariables":  [
+
+                                                                  ],
+                                             "responses":  [
+
+                                                           ]
+                                         },
+                                         {
+                                             "v":  1,
+                                             "name":  "02. Add Website Link",
+                                             "method":  "POST",
+                                             "endpoint":  "{{base_url}}/api/v1/qr-pages/{{qr_page_id}}/links",
+                                             "headers":  [
+                                                             {
+                                                                 "key":  "Accept",
+                                                                 "value":  "application/json",
+                                                                 "active":  true
+                                                             },
+                                                             {
+                                                                 "key":  "Content-Type",
+                                                                 "value":  "application/json",
+                                                                 "active":  true
+                                                             }
+                                                         ],
+                                             "params":  [
+
+                                                        ],
+                                             "body":  {
+                                                          "contentType":  "application/json",
+                                                          "body":  "{\n  \"label\": \"Website\",\n  \"icon_key\": \"website\",\n  \"destination_url\": \"https://example.com\",\n  \"is_active\": true\n}"
+                                                      },
+                                             "auth":  {
+                                                          "authType":  "none",
+                                                          "authActive":  false,
+                                                          "authName":  "",
+                                                          "authValue":  ""
+                                                      },
+                                             "preRequestScript":  "",
+                                             "testScript":  "pw.test(\"Create second link succeeded\", () =\u003e { pw.expect(pw.response.status).toBe(201); });\npw.env.set(\"second_link_id\", pw.response.body.data.id);",
+                                             "requestVariables":  [
+
+                                                                  ],
+                                             "responses":  [
+
+                                                           ]
+                                         },
+                                         {
+                                             "v":  1,
+                                             "name":  "03. Update Link",
+                                             "method":  "PATCH",
+                                             "endpoint":  "{{base_url}}/api/v1/qr-pages/{{qr_page_id}}/links/{{link_id}}",
+                                             "headers":  [
+                                                             {
+                                                                 "key":  "Accept",
+                                                                 "value":  "application/json",
+                                                                 "active":  true
+                                                             },
+                                                             {
+                                                                 "key":  "Content-Type",
+                                                                 "value":  "application/json",
+                                                                 "active":  true
+                                                             }
+                                                         ],
+                                             "params":  [
+
+                                                        ],
+                                             "body":  {
+                                                          "contentType":  "application/json",
+                                                          "body":  "{\n  \"label\": \"WhatsApp CS\",\n  \"destination_url\": \"https://wa.me/6289876543210\"\n}"
+                                                      },
+                                             "auth":  {
+                                                          "authType":  "none",
+                                                          "authActive":  false,
+                                                          "authName":  "",
+                                                          "authValue":  ""
+                                                      },
+                                             "preRequestScript":  "",
+                                             "testScript":  "",
+                                             "requestVariables":  [
+
+                                                                  ],
+                                             "responses":  [
+
+                                                           ]
+                                         },
+                                         {
+                                             "v":  1,
+                                             "name":  "04. Reorder Links",
+                                             "method":  "PUT",
+                                             "endpoint":  "{{base_url}}/api/v1/qr-pages/{{qr_page_id}}/links/reorder",
+                                             "headers":  [
+                                                             {
+                                                                 "key":  "Accept",
+                                                                 "value":  "application/json",
+                                                                 "active":  true
+                                                             },
+                                                             {
+                                                                 "key":  "Content-Type",
+                                                                 "value":  "application/json",
+                                                                 "active":  true
+                                                             }
+                                                         ],
+                                             "params":  [
+
+                                                        ],
+                                             "body":  {
+                                                          "contentType":  "application/json",
+                                                          "body":  "{\n  \"ids\": [\"{{link_id}}\", \"{{second_link_id}}\"]\n}"
+                                                      },
+                                             "auth":  {
+                                                          "authType":  "none",
+                                                          "authActive":  false,
+                                                          "authName":  "",
+                                                          "authValue":  ""
+                                                      },
+                                             "preRequestScript":  "",
+                                             "testScript":  "",
+                                             "requestVariables":  [
+
+                                                                  ],
+                                             "responses":  [
+
+                                                           ]
+                                         },
+                                         {
+                                             "v":  1,
+                                             "name":  "05. Delete Link",
+                                             "method":  "DELETE",
+                                             "endpoint":  "{{base_url}}/api/v1/qr-pages/{{qr_page_id}}/links/{{link_id}}",
+                                             "headers":  [
+                                                             {
+                                                                 "key":  "Accept",
+                                                                 "value":  "application/json",
+                                                                 "active":  true
+                                                             }
+                                                         ],
+                                             "params":  [
+
+                                                        ],
+                                             "body":  {
+                                                          "contentType":  "application/json",
+                                                          "body":  ""
+                                                      },
+                                             "auth":  {
+                                                          "authType":  "none",
+                                                          "authActive":  false,
+                                                          "authName":  "",
+                                                          "authValue":  ""
+                                                      },
+                                             "preRequestScript":  "",
+                                             "testScript":  "",
+                                             "requestVariables":  [
+
+                                                                  ],
+                                             "responses":  [
+
+                                                           ]
+                                         }
+                                     ]
+                    },
+                    {
+                        "v":  1,
+                        "name":  "04 - Public and Redirects",
+                        "folders":  [
+
+                                    ],
+                        "requests":  [
+                                         {
+                                             "v":  1,
+                                             "name":  "01. Public QR Data",
+                                             "method":  "GET",
+                                             "endpoint":  "{{base_url}}/api/v1/public/qr/{{qr_code}}",
+                                             "headers":  [
+                                                             {
+                                                                 "key":  "Accept",
+                                                                 "value":  "application/json",
+                                                                 "active":  true
+                                                             }
+                                                         ],
+                                             "params":  [
+
+                                                        ],
+                                             "body":  {
+                                                          "contentType":  "application/json",
+                                                          "body":  ""
+                                                      },
+                                             "auth":  {
+                                                          "authType":  "none",
+                                                          "authActive":  false,
+                                                          "authName":  "",
+                                                          "authValue":  ""
+                                                      },
+                                             "preRequestScript":  "",
+                                             "testScript":  "",
+                                             "requestVariables":  [
+
+                                                                  ],
+                                             "responses":  [
+
+                                                           ]
+                                         },
+                                         {
+                                             "v":  1,
+                                             "name":  "02. Scan QR Redirect",
+                                             "method":  "GET",
+                                             "endpoint":  "{{base_url}}/go/{{qr_code}}",
+                                             "headers":  [
+
+                                                         ],
+                                             "params":  [
+
+                                                        ],
+                                             "body":  {
+                                                          "contentType":  "application/json",
+                                                          "body":  ""
+                                                      },
+                                             "auth":  {
+                                                          "authType":  "none",
+                                                          "authActive":  false,
+                                                          "authName":  "",
+                                                          "authValue":  ""
+                                                      },
+                                             "preRequestScript":  "",
+                                             "testScript":  "",
+                                             "requestVariables":  [
+
+                                                                  ],
+                                             "responses":  [
+
+                                                           ]
+                                         },
+                                         {
+                                             "v":  1,
+                                             "name":  "03. Click Link Redirect",
+                                             "method":  "GET",
+                                             "endpoint":  "{{base_url}}/r/{{link_token}}",
+                                             "headers":  [
+
+                                                         ],
+                                             "params":  [
+
+                                                        ],
+                                             "body":  {
+                                                          "contentType":  "application/json",
+                                                          "body":  ""
+                                                      },
+                                             "auth":  {
+                                                          "authType":  "none",
+                                                          "authActive":  false,
+                                                          "authName":  "",
+                                                          "authValue":  ""
+                                                      },
+                                             "preRequestScript":  "",
+                                             "testScript":  "",
+                                             "requestVariables":  [
+
+                                                                  ],
+                                             "responses":  [
+
+                                                           ]
+                                         }
+                                     ]
+                    }
+                ],
+    "requests":  [
+
+                 ],
+    "environments":  [
+                         {
+                             "name":  "Local",
+                             "variables":  [
+                                               {
+                                                   "key":  "base_url",
+                                                   "value":  "http://localhost:8000",
+                                                   "type":  "text",
+                                                   "secret":  false
+                                               },
+                                               {
+                                                   "key":  "qr_page_id",
+                                                   "value":  "",
+                                                   "type":  "text",
+                                                   "secret":  false
+                                               },
+                                               {
+                                                   "key":  "link_id",
+                                                   "value":  "",
+                                                   "type":  "text",
+                                                   "secret":  false
+                                               },
+                                               {
+                                                   "key":  "second_link_id",
+                                                   "value":  "",
+                                                   "type":  "text",
+                                                   "secret":  false
+                                               },
+                                               {
+                                                   "key":  "qr_code",
+                                                   "value":  "",
+                                                   "type":  "text",
+                                                   "secret":  false
+                                               },
+                                               {
+                                                   "key":  "link_token",
+                                                   "value":  "",
+                                                   "type":  "text",
+                                                   "secret":  false
+                                               }
+                                           ]
+                         }
+                     ]
+}
